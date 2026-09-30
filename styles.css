@@ -1,0 +1,21 @@
+header {
+    background-color: antiquewhite;
+}
+
+.banner {
+    width: 100vw;
+    height: 20vh;
+    overflow-y: hidden;
+}
+
+.banner {
+    background-image: url();
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+}
