@@ -1,19 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --header-font: 'Sofia', system-ui;
     --body-font: 'Sofia', system-ui;
+
     --text-color: rgb(0, 0, 0);
     --background-color: rgb(255, 255, 255);
 
+    --accent-color: #ffd5ee;
+
     --link-color: rgb(255, 118, 118);
+    --button-color: rgb(255, 232, 247);
 }
 
 .accent {
-    --text-color: white;
-    --background-color: rgb(85, 114, 158);
-}
-
-img {
-
+    --text-color: black;
+    --background-color: var(--accent-color);
 }
 
 body {
@@ -25,8 +29,13 @@ body {
 }
 
 main {
+    position: relative;
+
     margin: auto;
-    background-color: rgb(225, 231, 248);
+    background: url("https://images.unsplash.com/photo-1641831705160-5d56ac4094cb?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+    background-repeat: repeat;
+    background-blend-mode: screen;
+    background-color: rgb(229, 229, 229);
 }
 
 
@@ -63,8 +72,9 @@ ul li {
 
 .product-grid {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1rem;
+    justify-content: center;
 }
 
 .product-grid > * {
@@ -104,27 +114,38 @@ header p {
     text-decoration: overline;
 }
 
+.button {
+    padding-inline: 1rem;
+    padding-block: .25rem;
+    background-color: var(--background-color);
+}
 
-
+.padded {
+    padding: 1em;
+}
 
 .content {
     max-inline-size: 50rem;
     margin-inline: auto;
-    padding: 1em;
 }
 
+.wide-content {
+    max-inline-size: 80rem;
+    margin-inline: auto;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+ 
 .content > img {
     max-height: 5rem;
     object-fit: cover;
     
 }
 
-
-.img {
-    height: 10rem;
-    object-fit: cover;
-    object-position: center;
-}
 
 .hero {
     padding: 0;
