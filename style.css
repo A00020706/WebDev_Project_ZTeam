@@ -1,12 +1,39 @@
+:root {
+    --header-font: 'Sofia', system-ui;
+    --body-font: 'Sofia', system-ui;
+    --text-color: rgb(0, 0, 0);
+    --background-color: rgb(132, 132, 199);
+}
+
+.accent {
+    --text-color: white;
+    --background-color: rgb(85, 114, 158);
+}
 
 body {
-    --background-clr: rgb(132, 132, 199);
-    --text-clr: white;
-
-
-    font-family: 'Sofia', system-ui;
-
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: --var(--body-font);
+    
     margin:0;
+}
+
+main {
+    margin: auto;
+    background-color: rgb(240, 244, 255);
+}
+
+
+section {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    margin:0;
+    font-family: var(--header-font);
 }
 
 ul {
@@ -41,10 +68,17 @@ header p {
     text-decoration: overline;
 }
 
-h1 {
-    margin:0;
+
+
+
+.content {
+    max-inline-size: 50rem;
+    margin-inline: auto;
 }
 
+.accent {
+
+}
 
 .hero {
     padding: 0;
@@ -73,12 +107,7 @@ footer {
     padding: 1rem;
 }
 
-main {
-    max-width: 80rem;
-    margin: auto;
-    padding: 2rem;
-    background-color: rgb(240, 244, 255);
-}
+
 
 .hero-content,
 nav {
