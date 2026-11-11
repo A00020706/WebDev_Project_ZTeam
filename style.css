@@ -4,8 +4,8 @@
 
 :root {
     /* Styling Variables*/
-    --header-font: 'Sofia', system-ui;
-    --body-font: 'Sofia', system-ui;
+    --header-font: 'Unbounded', system-ui;
+    --body-font: system-ui;
 
     --text-color: rgb(0, 0, 0);
     --background-color: rgb(255, 255, 255);
@@ -14,6 +14,7 @@
 
     --link-color: rgb(255, 118, 118);
     --button-color: rgb(255, 232, 247);
+    --button-color-hover: rgb(228, 112, 187);
 
 
 
@@ -70,6 +71,20 @@ h3 {
     font-family: var(--header-font);
 }
 
+details {
+    background-color: var(--accent-color);
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+details > p {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0;
+}
+
 h2::before {
     content: '';
     display:inline-block;
@@ -87,6 +102,42 @@ ul {
 
 ul li {
     display:inline-block;
+}
+
+.form-group {
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+    display: grid;
+
+    outline: .25rem solid var(--accent-color);
+    padding: 1rem;
+}
+
+input[type='submit'] {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    justify-self: start;
+}
+
+input[type='submit']:hover {
+
+    background-color: rgb(238, 113, 255);
+
+}
+
+.button {
+    padding: .5rem 1rem;
+    background-color: var(--button-color);
+    border-radius: 1rem;
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+.button:focus,
+.button:hover {
+    background-color: var(--button-color-hover);
+
 }
 
 .product-grid {
@@ -131,12 +182,6 @@ header {
 header p {
     margin-top: 0;
     text-decoration: overline;
-}
-
-.button {
-    padding-inline: 1rem;
-    padding-block: .25rem;
-    background-color: var(--background-color);
 }
 
 .padded {
